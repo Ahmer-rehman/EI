@@ -1,0 +1,1155 @@
+/* General Styles */
+@import url("https://fonts.google.com/share?selection.family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800");
+
+body {
+  margin: 0px !important;
+  font-family: "usual", sans-serif;
+  width: 100%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #000000;
+  background-color: white !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.myfont {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings:
+    "wdth"100;
+}
+
+.circle {
+  width: 2.125rem;
+  height: 2.125rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3.125rem;
+  position: relative;
+  transform: rotate(-180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 200%;
+  height: 0.5px;
+  background-color: black;
+}
+
+/* CSS for the static text */
+.static-text {
+  display: flex;
+  position: fixed;
+  /* Makes the text fixed to the viewport */
+  bottom: 0;
+  /* Positions the text at the bottom of the viewport */
+  left: 9vh;
+  /* Positions the text 10px from the left side of the viewport */
+  padding-left: 60px;
+  padding-top: 4%;
+  align-items: center;
+  justify-content: space-between;
+  transform-origin: bottom left;
+  /* Rotates text from bottom left corner */
+  transform: rotate(-90deg);
+  /* Rotates text vertically */
+  white-space: nowrap;
+  /* Prevents text from wrapping */
+  font-family: Arial, sans-serif;
+  /* Adjust font family as needed */
+  font-size: 0.73em;
+  /* Adjust font size as needed */
+  color: black;
+  /* Adjust text color as needed */
+  z-index: 9999;
+  /* Ensures the text stays on top of other elements */
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 2%;
+  width: 95%;
+  position: fixed;
+  /* Adjust padding as needed */
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-img {
+  height: 9vh;
+  padding-right: 5%;
+}
+
+.name-container {
+  overflow: hidden;
+  padding: 10% 3% 12% 2%;
+  line-height: 1.15;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  letter-spacing: 0.5px;
+  width: 10em;
+  z-index: 9999;
+
+}
+
+.name1 {
+  font-size: 1.7em;
+  font-family: myfont;
+}
+
+.name2 {
+  font-size: 1.35em;
+  font-family: 'Ubuntu Sans', sans-serif;
+  color: maroon;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover span {
+  background-color: darkgrey;
+}
+
+/* Styling for interactive elements */
+.o-link:before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #111;
+  transform: scale3d(0, 1, 1);
+  transform-origin: right;
+  transition: transform 0.45s;
+}
+
+.o-link:hover:before {
+  transform: scale3d(1, 1, 1);
+  transform-origin: left;
+}
+
+.pitch {
+  font-size: 50em;
+  font-weight: 550;
+  padding-left: 5%;
+  display: inline-block;
+}
+
+.pitch-words {
+  line-height: 0.75em;
+}
+
+.c-circle-svg {
+  width: 110%;
+  position: absolute;
+  top: 400px;
+  right: 11px;
+  height: 200vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.c-circle-item,
+.c-circle-plus circle,
+.c-circle-plus line {
+  fill: none;
+  stroke: rgb(202, 193, 193);
+  stroke-width: 1px;
+}
+
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  padding: 5% 2% 5% 5%;
+  width: 70%;
+  line-height: 110px;
+  flex-direction: column;
+}
+
+/* Style for the container of each word */
+.split_line {
+  box-sizing: border-box;
+  display: block;
+  text-align: left;
+  position: relative;
+  font-size: 4em;
+  max-width: 6em;
+  font-weight: 850;
+  padding-left: 0%;
+  white-space: nowrap;
+  letter-spacing: 0% !important;
+
+}
+
+/* Style for each word */
+.split_word {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  letter-spacing: -4px;
+  box-sizing: border-box;
+}
+
+.moto {
+  padding-top: 5%;
+  font-size: 6.5em;
+  font-weight: 650;
+  display: inline-block;
+  padding-left: 6%;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  background-color: #ffffff;
+}
+
+.text {
+  padding: 2% 0% 0% 2%;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  line-height: 0.85;
+  padding-left: 5%;
+}
+
+.dash {
+  align-self: flex-end;
+  width: 40px;
+  height: 10px;
+  align-items: bottom;
+  background-color: white;
+  border: 1.5px solid black;
+  border-left: none !important;
+}
+
+.words {
+  position: relative;
+  font-size: 6.6em;
+  font-weight: 850;
+  padding-left: 3%;
+  display: inline-block;
+  text-align: left;
+  line-height: 1;
+  white-space: nowrap;
+  color: transparent;
+  background: url('https://i.gifer.com/fxp1.gif') no-repeat;
+  -webkit-background-clip: text;
+}
+
+.fonts {
+  font-size: 2em;
+  line-height: 45px;
+}
+
+.experiences {
+  font-size: 1em;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-color: rgb(17, 17, 17);
+  -webkit-text-stroke-width: 1px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.right {
+  width: 50%;
+  text-align: right;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.word {
+  font-size: 30em;
+  font-weight: 850;
+  padding-left: 5%;
+  display: inline-block;
+  line-height: 1em;
+  background: url('https://i.gifer.com/fxp1.gif') no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+}
+
+
+.left {
+  flex: 1;
+  width: 100%;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.img {
+  width: 100%;
+  height: 1000px;
+  position: fixed;
+}
+
+.head {
+  font-size: 2em;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.description {
+  padding-bottom: 20px;
+  max-width: 100%;
+  font-weight: 100;
+}
+
+.call-for-action-button {
+  background-color: transparent;
+  /* Bright magenta for visibility, adjust the color as needed */
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-width: 1px;
+}
+
+.project-container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.title-container {
+  color: white;
+  display: flex;
+  padding: 5% 5% 2% 5%;
+  align-items: center;
+  /* Aligns children (text and line) in the center vertically */
+}
+
+.line {
+  align-self: center;
+  /* Ensures the line aligns itself to the center, redundant here due to container's align-items */
+  width: 100px;
+  height: 1px;
+  background-color: white;
+  border: none;
+  /* Removed border for simplicity, adjust as needed */
+}
+
+.title {
+  font-size: 1.7em;
+  font-weight: 750;
+  display: inline-block;
+  line-height: 1em;
+  padding-left: 1%;
+
+}
+
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Distributes space around items */
+  align-items: center;
+  /* Aligns items vertically */
+  height: 38vh;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  padding-left: 15%;
+}
+
+.logo {
+  flex: 0 0 20%;
+  /* Starts with 5 items per row */
+  display: flex;
+  justify-content: center;
+  /* Centers the image horizontally */
+  align-items: center;
+  /* Centers the image vertically */
+  padding: 0% 1% 2% 0%;
+  /* Adds space around each logo */
+}
+
+.logo img {
+  max-width: 50%;
+  /* Allows image to scale within its container */
+  top: 20%;
+  height: auto;
+  /* Maintains aspect ratio */
+  border-radius: 20%;
+  /* Creates a circular border if desired */
+}
+
+.Contact-container {
+  height: 50vh;
+  background-color: #910b09 !important;
+  padding: 5% 5% 5% 0%;
+  flex: 1;
+  transition: 1s all;
+}
+
+.slide-left {
+  animation: 3s slide-left;
+}
+
+.title-container2 {
+  padding-top: 5%;
+  padding-left: 5%;
+  color: white;
+  display: flex;
+  align-items: right;
+  /* Aligns children (text and line) in the center vertically */
+}
+
+.contact-description {
+  color: white;
+  text-align: left;
+  max-width: 44%;
+  padding-top: 2%;
+  padding-left: 15%;
+}
+
+.btn-container {
+  justify-content: left;
+  align-items: center;
+  padding: 2% 5% 5% 16%;
+  color: white
+}
+
+.color {
+  color: black !important;
+  outline: none !important;
+}
+
+.letsworktogeter {
+  height: 50vh;
+  width: 100%;
+  background-color: #FAF9F6 !important;
+}
+
+.footer-container {
+  height: 80vh;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.clock {
+  font-family: "Arial", sans-serif;
+  /* Font style */
+  color: white;
+  /* Text color */
+  background-color: black;
+  /* Background color */
+  border-radius: 10px;
+  /* Rounded corners */
+  display: inline-block;
+  /* Inline block for compact size */
+  padding: 8% 8% 0% 8%;
+  /* Padding around the content */
+  text-align: center;
+  /* Center text alignment */
+  display: flex;
+  justify-content: left;
+  /* Centers the image horizontally */
+}
+
+.time {
+  font-size: 40px;
+  /* Large font size for time */
+  line-height: 50px;
+  /* Line height to vertically center */
+}
+
+.date {
+  font-size: 34px;
+  /* Smaller font size for date */
+  padding-top: -10px;
+  /* Adjust spacing between time and date */
+  padding-left: 20%;
+}
+
+.heart {
+  color: maroon;
+  /* Green heart symbol */
+  padding: 0 10px;
+  /* Padding around the heart */
+}
+
+.line-vertical {
+  align-self: center;
+  /* Ensures the line aligns itself to the center, redundant here due to container's align-items */
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  border: none;
+}
+
+.footer_logo {
+  height: auto;
+  width: 5%;
+  padding: 2%;
+  border-radius: 10%;
+}
+
+.footer_text {
+  padding-top: 4%;
+  text-align: left;
+}
+
+.contacts-container {
+  color: rgb(130, 130, 180);
+  font-size: 0.73em;
+  padding-left: 16%;
+
+}
+
+/* scroll */
+
+.scroll-container {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  /* Default text color */
+  z-index: 9999;
+}
+
+.scroll-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.s-circle,
+.s-line {
+  background-color: black;
+  /* Default line color */
+  z-index: 9999;
+}
+
+.s-circle {
+  width: 22px;
+  height: 3px;
+}
+
+.s-line {
+  width: 2px;
+
+}
+
+.dark-theme {
+  color: white;
+}
+
+.dark-theme .s-circle,
+.dark-theme .s-line {
+  background-color: white;
+}
+
+/* animations */
+/* Type writer */
+.typed-out {
+  overflow: hidden;
+  background-color: transparent !important;
+  ;
+  border-right: .15em solid maroon;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation:
+    typing 6s forwards infinite linear;
+  width: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 85%
+  }
+}
+
+/* Type writer end */
+.container {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-container {
+  animation: slideIn 1s ease forwards;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section2 {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.Contact-container,
+.letsworktogeter,
+.footer-container {
+  opacity: 0;
+
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-left-to-right {
+  animation: fadeInLeftToRight 1s ease forwards;
+}
+
+@keyframes fadeInLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+/* Default styles (for desktop) */
+
+/* Styles for tablets (between 600px and 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* Tablet-specific styles */
+
+  .circle {
+    display: none;
+  }
+
+  .circle::after {
+    display: none;
+
+  }
+
+  /* CSS for the static text */
+  .static-text {
+    display: none;
+    /* Ensures the text stays on top of other elements */
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .logo {
+    height: 5vh;
+    padding-right: 3%;
+  }
+
+  .name-container {
+    padding: 10% 3% 12% 2%;
+    font-size: 0.7em;
+  }
+
+  .split_line {
+    font-size: 2.5em;
+    line-height: 55px;
+  }
+
+  .moto {
+    font-size: 4.5em;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    line-height: 0.85;
+  }
+
+  .dash {
+    width: 40px;
+    height: 7px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 5% 5% 0% 5%;
+    background-color: white;
+  }
+
+  .right {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: right;
+  }
+
+  .word {
+    font-size: 30em;
+    font-weight: 950;
+
+  }
+}
+
+@media (max-width: 400px) {
+
+  .circle {
+    display: none;
+  }
+
+  .circle::after {
+    display: none;
+
+  }
+
+  .static-text {
+    display: none;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    box-sizing: border-box;
+    padding-right: 3%;
+    height: 5.5vh !important;
+    width: 10%;
+  }
+
+  .header-logo-img {
+    height: 4vh;
+    padding-right: 5%;
+  }
+
+  .name-container {
+    padding: 10% 3% 12% 2%;
+    width: 11em;
+    font-size: 0.7em;
+  }
+
+  .name1 {
+    color: #000000;
+    font-size: 1.3em !important;
+    font-weight: 600 !important;
+  }
+
+  .name2 {
+    font-size: 1.05em;
+    font-family: 'Ubuntu Sans', sans-serif;
+    color: maroon;
+    font-weight: 450;
+
+  }
+
+  .section {
+    padding-top: 5% !important;
+    line-height: 0.7;
+  }
+
+  .split_line {
+    font-size: 1.5em;
+
+  }
+
+  .moto {
+    font-size: 1.0em;
+  }
+
+  .experiences {
+    font-size: 1em;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: rgb(17, 17, 17);
+    -webkit-text-stroke-width: .5px;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    line-height: 0.85;
+    padding-left: 10%;
+  }
+
+  .dash {
+    width: 10px;
+    height: 2px;
+    border-width: .5px;
+
+  }
+
+  .content {
+    display: flex;
+    /* padding: 5% 5% 0% 5%; */
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .left {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    text-align: left;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .right {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .word {
+    font-weight: 950;
+    font-size: 15em !important;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .container1 {
+    display: flex;
+    background-color: #ffffff;
+    padding-left: 10px;
+  }
+
+  .line {
+    align-self: center;
+    /* Ensures the line aligns itself to the center, redundant here due to container's align-items */
+    width: 30px;
+    height: 1px;
+    background-color: white;
+    border: none;
+    /* Removed border for simplicity, adjust as needed */
+  }
+
+  .project-container {
+    height: 30vh;
+    width: 102%;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    padding-left: 15%;
+    flex-direction: row-reverse;
+    align-content: center;
+  }
+
+  .description {
+    font-size: 0.54em;
+    padding-bottom: 20px;
+    max-width: 80%;
+    font-weight: 100;
+  }
+
+  .contact-description {
+    color: white;
+    text-align: left;
+    max-width: 44%;
+    padding-top: 2%;
+    padding-left: 16%;
+    font-size: 0.3em;
+  }
+
+  .call-for-action-button {
+    font-size: 0.2em;
+    border-radius: 1px;
+  }
+
+  .letsworktogeter {
+    max-height: 35vh;
+    width: 102;
+  }
+
+  .right {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 3% 3% 3% 3%;
+  }
+
+  .Contact-container {
+    max-height: 20vh !important;
+    width: 102%;
+    max-height: 13vh;
+    background-color: #910b09 !important;
+    /* padding: 10% 5% 5% 6%; */
+    flex: 1;
+    transition: 1s all;
+  }
+
+  .head {
+    font-size: 0.7em;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .Contact-container {
+    max-height: 20vh !important;
+    width: 100%;
+    background-color: #910b09 !important;
+    padding: 0%;
+    padding-top: 2%;
+    transition: 1s all;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    max-width: 100% !important;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    padding-left: 5%;
+  }
+
+  .header-logo {
+    flex: 0 0 25%;
+    /* Starts with 5 items per row */
+    display: flex;
+    justify-content: center;
+    /* Centers the image horizontally */
+    align-items: center;
+    /* Centers the image vertically */
+    padding: 0% 1% 4% 0%;
+    /* Adds space around each logo */
+  }
+
+  .logo {
+    flex: 0 0 25%;
+    /* Starts with 5 items per row */
+    display: flex;
+    justify-content: center;
+    /* Centers the image horizontally */
+    align-items: center;
+    /* Centers the image vertically */
+    padding: 0% 1% 4% 0%;
+    /* Adds space around each logo */
+  }
+
+  .logo img {
+    max-width: 50%;
+    /* Allows image to scale within its container */
+    top: 20%;
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 20%;
+    /* Creates a circular border if desired */
+  }
+
+  .footer-container {
+    height: 30vh;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clock {
+    font-family: "Arial", sans-serif;
+    /* Font style */
+    color: white;
+    /* Text color */
+    background-color: black;
+    /* Background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    display: inline-block;
+    /* Inline block for compact size */
+    padding: 8% 8% 0% 8%;
+    /* Padding around the content */
+    text-align: center;
+    /* Center text alignment */
+    display: flex;
+    justify-content: left;
+    /* Centers the image horizontally */
+  }
+
+  .time {
+    font-size: 20px;
+    /* Large font size for time */
+    line-height: 20px;
+    /* Line height to vertically center */
+  }
+
+  .date {
+    font-size: 20px;
+    /* Smaller font size for date */
+    padding-top: -10px;
+    /* Adjust spacing between time and date */
+    padding-left: 20%;
+  }
+
+  .heart {
+    color: maroon;
+    /* Green heart symbol */
+    padding: 0 10px;
+    /* Padding around the heart */
+  }
+
+  .line-vertical {
+    align-self: center;
+    /* Ensures the line aligns itself to the center, redundant here due to container's align-items */
+    width: 2px;
+    height: 50px;
+    background-color: white;
+    border: none;
+  }
+
+  .footer_logo {
+    height: 50px;
+    width: 10%;
+    padding: 2%;
+    border-radius: 10%;
+  }
+
+  .footer_text {
+    padding-top: 4%;
+    text-align: left;
+  }
+
+  .contacts-container {
+    color: rgb(130, 130, 180);
+    font-size: 0.33em;
+    padding-left: 16%;
+  }
+}

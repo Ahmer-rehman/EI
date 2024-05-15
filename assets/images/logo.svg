@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="checkerboard" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="5" height="5" fill="maroon" />
+      <rect x="5" width="5" height="5" fill="white" />
+      <rect y="5" width="5" height="5" fill="white" />
+      <rect x="5" y="5" width="5" height="5" fill="maroon" />
+    </pattern>
+  </defs>
+  <path fill-rule="evenodd" clip-rule="evenodd" 
+        d="M64.4278 5.289L59.7591 0.771484H52.6264L47.8712 5.289V12.3999L64.4278 27.4583L81.0276 12.3999V5.289L76.2292 0.771484H69.0965L64.4278 5.289ZM70.7325 4.81494L64.4278 10.9155L58.1231 4.81494H54.2409L51.9147 7.02487V10.6118L64.4314 21.9958L76.9841 10.6086V7.0357L74.6253 4.81494H70.7325Z" 
+        fill="url(#checkerboard)" />
+</svg>
